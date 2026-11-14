@@ -43,3 +43,13 @@ def dividir_cuenta(total, personas):
 def calcular_vuelto(total, pagado):
     """Devuelve cuánto vuelto hay que dar: lo que pagó el cliente menos el total."""
     return pagado - total
+
+
+def pesos_a_dolares(pesos, cotizacion):
+    """Convierte pesos a dólares. dólares = pesos / cotización."""
+    return pesos / cotizacion
+
+
+def dolares_a_pesos(dolares, cotizacion):
+    """Convierte dólares a pesos. pesos = dólares * cotización."""
+    return dolares * cotizacion
