@@ -13,6 +13,8 @@ Es un proyecto abierto: **cualquiera puede proponer mejoras** haciendo un fork y
 | 3 | Agregar IVA (21%) | $1000 → $1210 |
 | 4 | Dividir la cuenta entre amigos | $12000 entre 4 → $3000 cada uno |
 | 5 | Calcular el vuelto | Total $750, paga con $1000 → $250 |
+| 6 | Convertir pesos a dólares | $50000 con cotización 1000 → US$ 50 |
+| 7 | Convertir dólares a pesos | US$ 20 con cotización 1000 → $20000 |
 
 ## Requisitos
 
