@@ -61,7 +61,7 @@ def test_calcular_cuotas_sin_interes():
     assert calcular_cuotas(12000, 3, 0) == 4000
 
 
-def test_calcular_cuotas_con_interes():
+def test_calcular_cuotas_con_interes_del_10():
     # $12000 en 6 cuotas con 10% de interés = $2200 cada cuota
     assert calcular_cuotas(12000, 6, 10) == 2200
 

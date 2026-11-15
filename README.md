@@ -49,7 +49,7 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
-Si todo está bien vas a ver algo como `6 passed`.
+Si todo está bien vas a ver algo como `9 passed`.
 
 ## Estructura del proyecto
 
