@@ -9,6 +9,7 @@ Cada función de calculadora.py debería tener al menos un test acá.
 
 from calculadora import (
     sumar_compras,
+    aplicar_descuento,
     agregar_iva,
     dividir_cuenta,
     calcular_vuelto,
@@ -26,6 +27,18 @@ def test_sumar_compras():
 def test_sumar_compras_un_solo_producto():
     # Si compro una sola cosa, el total es su precio
     assert sumar_compras([780]) == 780
+
+
+# ----- Descuentos -----
+
+def test_aplicar_descuento_del_50_por_ciento():
+    # $1000 con 50% de descuento = $500
+    assert aplicar_descuento(1000, 50) == 500
+
+
+def test_aplicar_descuento_del_10_por_ciento():
+    # $2000 con 10% de descuento = $1800
+    assert aplicar_descuento(2000, 10) == 1800
 
 
 # ----- IVA -----
