@@ -13,6 +13,8 @@ from calculadora import (
     agregar_iva,
     dividir_cuenta,
     calcular_vuelto,
+    pesos_a_dolares,
+    dolares_a_pesos,
     calcular_cuotas,
 )
 
@@ -66,6 +68,26 @@ def test_calcular_vuelto_justo():
     # Paga justo -> no hay vuelto
     assert calcular_vuelto(500, 500) == 0
 
+# ----- Conversor de moneda -----
+
+def test_pesos_a_dolares_cotizacion_1000():
+    # $50000 con cotización 1000 = US$ 50
+    assert pesos_a_dolares(50000, 1000) == 50
+
+
+def test_pesos_a_dolares_cotizacion_1200():
+    # $15000 con cotización 1200 = US$ 12.50
+    assert pesos_a_dolares(15000, 1200) == 12.50
+
+
+def test_dolares_a_pesos_cotizacion_1000():
+    # US$ 20 con cotización 1000 = $20000
+    assert dolares_a_pesos(20, 1000) == 20000
+
+
+def test_dolares_a_pesos_con_decimales():
+    # US$ 12.5 con cotización 1200 = $15000
+    assert dolares_a_pesos(12.5, 1200) == 15000
 
 # ----- Calcular cuotas -----
 

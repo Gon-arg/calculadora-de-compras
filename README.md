@@ -14,6 +14,8 @@ Es un proyecto abierto: **cualquiera puede proponer mejoras** haciendo un fork y
 | 4 | Dividir la cuenta entre amigos | $12000 entre 4 → $3000 cada uno |
 | 5 | Calcular el vuelto | Total $750, paga con $1000 → $250 |
 | 6 | Calcular cuotas | $12000 en 6 cuotas con 10% → $2200 cada cuota |
+| 7 | Convertir pesos a dólares | $50000 con cotización 1000 → US$ 50 |
+| 8 | Convertir dólares a pesos | US$ 20 con cotización 1000 → $20000 |
 
 ## Requisitos
 

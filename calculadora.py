@@ -45,6 +45,16 @@ def calcular_vuelto(total, pagado):
     return pagado - total
 
 
+
+def pesos_a_dolares(pesos, cotizacion):
+    """Convierte pesos a dólares. dólares = pesos / cotización."""
+    return pesos / cotizacion
+
+
+def dolares_a_pesos(dolares, cotizacion):
+    """Convierte dólares a pesos. pesos = dólares * cotización."""
+    return dolares * cotizacion
+
 def calcular_cuotas(precio, cuotas, interes):
     """
     Calcula el valor de cada cuota de una compra.
