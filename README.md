@@ -11,11 +11,13 @@ Es un proyecto abierto: **cualquiera puede proponer mejoras** haciendo un fork y
 | 1 | Sumar compras | $100, $250, $50 → $400 |
 | 2 | Aplicar un descuento | $1000 con 10% → $900 |
 | 3 | Agregar IVA (21%) | $1000 → $1210 |
-| 4 | Dividir la cuenta entre amigos | $12000 entre 4 → $3000 cada uno |
+| 4 | Dividir la cuenta entre amigos | $12000 entre 4 → $3000 cada uno (valida que no sea 0) | 
 | 5 | Calcular el vuelto | Total $750, paga con $1000 → $250 |
 | 6 | Calcular cuotas | $12000 en 6 cuotas con 10% → $2200 cada cuota |
 | 7 | Convertir pesos a dólares | $50000 con cotización 1000 → US$ 50 |
 | 8 | Convertir dólares a pesos | US$ 20 con cotización 1000 → $20000 |
+
+*Nota: El sistema valida que el usuario ingrese números y no letras, y que los valores no sean negativos.*
 
 ## Requisitos
 

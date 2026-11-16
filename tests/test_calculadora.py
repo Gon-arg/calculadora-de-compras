@@ -68,6 +68,12 @@ def test_calcular_vuelto_justo():
     # Paga justo -> no hay vuelto
     assert calcular_vuelto(500, 500) == 0
 
+
+
+def test_dividir_cuenta_ok():
+    # Test para asegurar que la división normal sigue funcionando
+    assert dividir_cuenta(1000, 2) == 500
+
 # ----- Conversor de moneda -----
 
 def test_pesos_a_dolares_cotizacion_1000():
@@ -125,3 +131,4 @@ def test_dividir_cuenta_otro_caso():
 def test_calcular_vuelto_otro_caso():
     # Total $1500, paga con $2000 -> vuelto $500
     assert calcular_vuelto(1500, 2000) == 500
+
