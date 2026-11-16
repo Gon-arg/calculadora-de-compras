@@ -27,7 +27,7 @@ def aplicar_descuento(precio, porcentaje):
 
     porcentaje: el descuento en %, por ejemplo 10 para un 10% de descuento.
     """
-    return precio - porcentaje
+    return precio - (precio * porcentaje / 100)
 
 
 def agregar_iva(precio):
@@ -45,6 +45,7 @@ def calcular_vuelto(total, pagado):
     return pagado - total
 
 
+
 def pesos_a_dolares(pesos, cotizacion):
     """Convierte pesos a dólares. dólares = pesos / cotización."""
     return pesos / cotizacion
@@ -53,3 +54,14 @@ def pesos_a_dolares(pesos, cotizacion):
 def dolares_a_pesos(dolares, cotizacion):
     """Convierte dólares a pesos. pesos = dólares * cotización."""
     return dolares * cotizacion
+
+def calcular_cuotas(precio, cuotas, interes):
+    """
+    Calcula el valor de cada cuota de una compra.
+
+    precio: precio original del producto.
+    cuotas: cantidad de cuotas.
+    interes: porcentaje de interés aplicado.
+    """
+    precio_final = precio + (precio * interes / 100)
+    return precio_final / cuotas

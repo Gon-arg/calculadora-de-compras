@@ -13,6 +13,7 @@ from calculadora import (
     calcular_vuelto,
     pesos_a_dolares,
     dolares_a_pesos,
+    calcular_cuotas,
 )
 
 
@@ -39,8 +40,9 @@ def mostrar_menu():
     print("3. Agregar IVA (21%)")
     print("4. Dividir la cuenta entre amigos")
     print("5. Calcular el vuelto")
-    print("6. Convertir pesos a dólares")
-    print("7. Convertir dólares a pesos")
+    print("6. Calcular cuotas")
+    print("7. Convertir pesos a dólares")
+    print("8. Convertir dólares a pesos")
     print("0. Salir")
 
 
@@ -73,11 +75,18 @@ def main():
             print(f"Vuelto = ${calcular_vuelto(total, pagado):.2f}")
 
         elif opcion == "6":
+            precio = pedir_numero("Precio de la compra ($): ")
+            cuotas = pedir_numero("Cantidad de cuotas: ")
+            interes = pedir_numero("Interés (%): ")
+            valor_cuota = calcular_cuotas(precio, cuotas, interes)
+            print(f"Valor de cada cuota = ${valor_cuota:.2f}")
+
+        elif opcion == "7":
             pesos = pedir_numero("Cantidad en pesos ($): ")
             cotizacion = pedir_numero("Cotización del día (pesos por 1 dólar): ")
             print(f"Resultado = US${pesos_a_dolares(pesos, cotizacion):.2f}")
 
-        elif opcion == "7":
+        elif opcion == "8":
             dolares = pedir_numero("Cantidad en dólares (US$): ")
             cotizacion = pedir_numero("Cotización del día (pesos por 1 dólar): ")
             print(f"Resultado = ${dolares_a_pesos(dolares, cotizacion):.2f}")
