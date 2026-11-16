@@ -36,13 +36,19 @@ def pedir_lista(mensaje):
         texto = input(mensaje)
         try:
             valores = []
+            es_valido = True
             for parte in texto.split(","):
                 numero = float(parte.strip())
                 if numero < 0:
                     print("El valor no puede ser negativo.")
-                    raise ValueError("Negativo") # Forzamos el error para que vuelva a pedir
+                    es_valido = False
+                    break # Cortamos el bucle for
+                
                 valores.append(numero)
-            return valores
+            
+            if es_valido:
+                return valores
+            
         except ValueError:
             print("Eso no es un número, probá de nuevo.")
 
