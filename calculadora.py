@@ -27,7 +27,7 @@ def aplicar_descuento(precio, porcentaje):
 
     porcentaje: el descuento en %, por ejemplo 10 para un 10% de descuento.
     """
-    return precio - porcentaje
+    return precio - (precio * porcentaje / 100)
 
 
 def agregar_iva(precio):
