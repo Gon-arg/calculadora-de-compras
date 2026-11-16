@@ -82,3 +82,24 @@ def test_calcular_cuotas_con_interes_del_10():
 def test_calcular_cuotas_con_interes_del_20():
     # $9000 en 3 cuotas con 20% de interés = $3600 cada cuota
     assert calcular_cuotas(9000, 3, 20) == 3600
+
+
+# ----- IVA -----
+
+def test_agregar_iva_otro_caso():
+    # $500 + 21% de IVA = $605
+    assert round(agregar_iva(500), 2) == 605
+
+
+# ----- Dividir la cuenta -----
+
+def test_dividir_cuenta_otro_caso():
+    # $10000 entre 5 personas = $2000 cada una
+    assert dividir_cuenta(10000, 5) == 2000
+
+
+# ----- Vuelto -----
+
+def test_calcular_vuelto_otro_caso():
+    # Total $1500, paga con $2000 -> vuelto $500
+    assert calcular_vuelto(1500, 2000) == 500
