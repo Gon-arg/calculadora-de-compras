@@ -94,13 +94,19 @@ def main():
             total = pedir_numero("Total de la cuenta ($): ")
             while True:
                 personas = pedir_numero("Cantidad de personas: ")
+                # Verificamos que sea mayor a cero y que no tenga decimales
                 if personas == 0:
                     print("Tiene que haber al menos una persona.")
                     continue
+                if personas != int(personas):
+                    print("La cantidad de personas debe ser un número entero. Probá de nuevo.")
+                    continue
                 break
             
-            print(f"Paga cada uno = ${dividir_cuenta(total, personas):.2f}")
-        
+            # Convertimos a entero para que se vea más limpio
+            print(f"Paga cada uno = ${dividir_cuenta(total, int(personas)):.2f}")
+                
+           
       
         elif opcion == "5":
             total = pedir_numero("Total a pagar ($): ")
