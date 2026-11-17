@@ -90,12 +90,12 @@ def main():
             precio = pedir_numero("Precio sin IVA ($): ")
             print(f"Precio con IVA = ${agregar_iva(precio):.2f}")
 
+
         elif opcion == "4":
             total = pedir_numero("Total de la cuenta ($): ")
             while True:
                 personas = pedir_numero("Cantidad de personas: ")
-                # Verificamos que sea mayor a cero y que no tenga decimales
-                if personas == 0:
+                if personas <= 0:
                     print("Tiene que haber al menos una persona.")
                     continue
                 if personas != int(personas):
@@ -103,15 +103,19 @@ def main():
                     continue
                 break
             
-            # Convertimos a entero para que se vea más limpio
             print(f"Paga cada uno = ${dividir_cuenta(total, int(personas)):.2f}")
-                
-           
-      
+
         elif opcion == "5":
             total = pedir_numero("Total a pagar ($): ")
-            pagado = pedir_numero("Con cuánto paga el cliente ($): ")
+            while True:
+                pagado = pedir_numero("Con cuánto paga el cliente ($): ")
+                if pagado < total:
+                    print("El importe es insuficiente. Por favor, ingrese un monto mayor o igual al total.")
+                    continue
+                break
             print(f"Vuelto = ${calcular_vuelto(total, pagado):.2f}")
+        
+        
 
         elif opcion == "6":
             precio = pedir_numero("Precio de la compra ($): ")
