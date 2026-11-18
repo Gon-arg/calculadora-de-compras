@@ -66,5 +66,8 @@ def calcular_cuotas(precio, cuotas, interes):
     if cuotas <= 0:
         raise ValueError("La cantidad de cuotas debe ser mayor que cero.")
 
+    if not isinstance(cuotas, int):
+        raise ValueError("La cantidad de cuotas debe ser un número entero.")
+
     precio_final = precio + (precio * interes / 100)
     return precio_final / cuotas

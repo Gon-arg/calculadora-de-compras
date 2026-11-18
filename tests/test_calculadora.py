@@ -121,6 +121,15 @@ def test_calcular_cuotas_cero_debe_generar_error():
         calcular_cuotas(1000, 0, 10)
 
 
+def test_calcular_cuotas_decimales_debe_generar_error():
+    # La cantidad de cuotas debe ser un número entero
+    with pytest.raises(
+        ValueError,
+        match="La cantidad de cuotas debe ser un número entero"
+    ):
+        calcular_cuotas(1000, 2.5, 10)
+
+
 # ----- IVA -----
 
 def test_agregar_iva_otro_caso():
