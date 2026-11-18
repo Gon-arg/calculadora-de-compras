@@ -83,8 +83,15 @@ def main():
 
         elif opcion == "2":
             precio = pedir_numero("Precio ($): ")
-            porcentaje = pedir_numero("Descuento (%): ")
+            while True:
+                porcentaje = pedir_numero("Descuento (%): ")
+                if porcentaje >= 100:
+                    print("El descuento no puede ser mayor o igual al 100%. Probá de nuevo.")
+                    continue
+                break
             print(f"Precio con descuento = ${aplicar_descuento(precio, porcentaje):.2f}")
+        
+
 
         elif opcion == "3":
             precio = pedir_numero("Precio sin IVA ($): ")
