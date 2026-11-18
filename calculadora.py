@@ -63,5 +63,8 @@ def calcular_cuotas(precio, cuotas, interes):
     cuotas: cantidad de cuotas.
     interes: porcentaje de interés aplicado.
     """
+    if cuotas <= 0:
+        raise ValueError("La cantidad de cuotas debe ser mayor que cero.")
+
     precio_final = precio + (precio * interes / 100)
     return precio_final / cuotas

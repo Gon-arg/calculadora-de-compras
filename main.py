@@ -121,8 +121,12 @@ def main():
             precio = pedir_numero("Precio de la compra ($): ")
             cuotas = pedir_numero("Cantidad de cuotas: ")
             interes = pedir_numero("Interés (%): ")
-            valor_cuota = calcular_cuotas(precio, cuotas, interes)
-            print(f"Valor de cada cuota = ${valor_cuota:.2f}")
+
+            try:
+                valor_cuota = calcular_cuotas(precio, cuotas, interes)
+                print(f"Valor de cada cuota = ${valor_cuota:.2f}")
+            except ValueError as error:
+                print(f"Error: {error}")
 
         elif opcion == "7":
             pesos = pedir_numero("Cantidad en pesos ($): ")

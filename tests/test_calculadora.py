@@ -6,7 +6,7 @@ Ejecutar con:
 
 Cada función de calculadora.py debería tener al menos un test acá.
 """
-
+import pytest
 from calculadora import (
     sumar_compras,
     aplicar_descuento,
@@ -112,6 +112,15 @@ def test_calcular_cuotas_con_interes_del_20():
     assert calcular_cuotas(9000, 3, 20) == 3600
 
 
+def test_calcular_cuotas_cero_debe_generar_error():
+    # No se puede dividir el precio en cero cuotas
+    with pytest.raises(
+        ValueError,
+        match="La cantidad de cuotas debe ser mayor que cero"
+    ):
+        calcular_cuotas(1000, 0, 10)
+
+
 # ----- IVA -----
 
 def test_agregar_iva_otro_caso():
@@ -131,4 +140,3 @@ def test_dividir_cuenta_otro_caso():
 def test_calcular_vuelto_otro_caso():
     # Total $1500, paga con $2000 -> vuelto $500
     assert calcular_vuelto(1500, 2000) == 500
-
